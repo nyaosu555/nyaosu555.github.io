@@ -511,7 +511,7 @@ header .headerBottomContainer nav ul li a.selected {
 .topVisual {
   width: 100%;
   height: 100%;
-  background-image: url(img/hasu.jpg);
+  background-image: url(https://nyaosu555.github.io/img/hasu.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 28%;
@@ -717,7 +717,7 @@ header .headerBottomContainer nav ul li a.selected {
 .concept .container .coceptBody .conceptImage {
   width: 40%;
   height: 400px;
-  background-image: url(img/osumousan.png);
+  background-image: url(https://nyaosu555.github.io/img/osumousan.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -741,7 +741,7 @@ header .headerBottomContainer nav ul li a.selected {
   width: 20%;
   height: 0;
   padding-bottom: 63%;
-  background-image: url(img/maninonrei.png);
+  background-image: url(https://nyaosu555.github.io/img/maninonrei.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -754,7 +754,7 @@ header .headerBottomContainer nav ul li a.selected {
 
 /* itemLineUp  */
 .itemLineUp {
-  background-image: url(img/bg_wood.png);
+  background-image: url(https://nyaosu555.github.io/img/bg_wood.png);
   padding-top: 120px;
   position: relative;
 }
@@ -883,13 +883,13 @@ header .headerBottomContainer nav ul li a.selected {
   z-index: 1;
 }
 .itemLineUp .itemLineUpBody .itemLineUpLists > li.showTarget:first-of-type::before {
-  background-image: url(img/pin.png);
+  background-image: url(https://nyaosu555.github.io/img/pin.png);
 }
 .itemLineUp .itemLineUpBody .itemLineUpLists > li.showTarget:nth-of-type(2)::before {
-  background-image: url(img/pin_blue.png);
+  background-image: url(https://nyaosu555.github.io/img/pin_blue.png);
 }
 .itemLineUp .itemLineUpBody .itemLineUpLists > li.showTarget:nth-of-type(3)::before {
-  background-image: url(img/pin_yellow.png);
+  background-image: url(https://nyaosu555.github.io/img/pin_yellow.png);
 }
 .itemLineUp .itemLineUpBody .itemLineUpLists > li.showTarget a {
   display: block;
@@ -997,13 +997,13 @@ header .headerBottomContainer nav ul li a.selected {
   background-color: #eee;
 }
 .itemLineUp .itemLineUpBody .itemLineUpLists > li.showTarget:first-of-type a .itemLineUpImage {
-  background-image: url(img/komusubi.jpg);
+  background-image: url(https://nyaosu555.github.io/img/komusubi.jpg);
 }
 .itemLineUp .itemLineUpBody .itemLineUpLists > li.showTarget:nth-of-type(2) a .itemLineUpImage {
-  background-image: url(img/oozeki.jpg);
+  background-image: url(https://nyaosu555.github.io/img/oozeki.jpg);
 }
 .itemLineUp .itemLineUpBody .itemLineUpLists > li.showTarget:nth-of-type(3) a .itemLineUpImage {
-  background-image: url(img/yokoduna.jpg);
+  background-image: url(https://nyaosu555.github.io/img/yokoduna.jpg);
 }
 .itemLineUp .itemLineUpBody .itemLineUpLists > li.showTarget .tagLists {
   display: -webkit-box;
