@@ -1417,6 +1417,7 @@ footer .container small {
 /* media query */
 @media screen and (max-width: 1024px) {
   header .headerTopContainer {
+    background-color: #fff;
     height: 85px;
     padding: 0 20px;
     position: relative;
