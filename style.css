@@ -270,7 +270,10 @@ a {
 }
 
 section {
-  margin: 200px 0;
+  margin-top: 200px;
+}
+section:last-of-type {
+  margin-bottom: 200px;
 }
 
 .sectionTitle {
@@ -329,6 +332,105 @@ p {
 .mask .mask.active {
   opacity: 0.9;
   visibility: visible;
+}
+
+.notice {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+  padding: 1rem;
+  color: #fff;
+  border: 2px dashed #fff;
+  border-radius: 10px;
+  background-color: rgba(248, 147, 226, 0.7);
+  -webkit-box-shadow: 0 0 0 10px rgba(248, 147, 226, 0.7);
+          box-shadow: 0 0 0 10px rgba(248, 147, 226, 0.7);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.notice.showTarget {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.itemLineUpSubTitle {
+  width: 115px;
+  margin: 0 auto 60px;
+  text-align: center;
+  font-size: 20px;
+  color: #333;
+  position: relative;
+}
+.itemLineUpSubTitle::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 3px;
+  background-color: #df6952;
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+}
+
+.contactBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  margin-left: 3rem;
+  background-color: #eee;
+  font-family: "M PLUS 1p", sans-serif;
+  font-weight: 300;
+  position: relative;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.contactBtn::before {
+  padding-right: 10px;
+  font-family: "Font Awesome 5 Pro";
+}
+.contactBtn::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  border: 2px solid #f8c2f4;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.contactBtn:hover {
+  background-color: #f0bade;
+}
+.contactBtn:hover::after {
+  top: 0;
+  left: 0;
+}
+
+.tel {
+  width: 100%;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: right;
+  font-family: "M PLUS 1p", sans-serif;
+}
+
+.tel.fa-phone-square-alt::before {
+  padding-right: 10px;
+  font-family: "Font Awesome 5 Pro";
 }
 
 /*  header  */
@@ -403,56 +505,6 @@ header .headerTopContainer .headerRight {
 }
 header .headerTopContainer .headerRight .info .time {
   font-size: 14px;
-}
-header .headerTopContainer .headerRight .info .tel {
-  width: 100%;
-  font-size: 24px;
-  font-weight: 700;
-  text-align: right;
-  font-family: "M PLUS 1p", sans-serif;
-}
-header .headerTopContainer .headerRight .info .tel.fa-phone-square-alt::before {
-  padding-right: 10px;
-  font-family: "Font Awesome 5 Pro";
-}
-header .headerTopContainer .headerRight .contactBtn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 20px;
-  margin-left: 3rem;
-  background-color: #eee;
-  font-family: "M PLUS 1p", sans-serif;
-  font-weight: 300;
-  position: relative;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-header .headerTopContainer .headerRight .contactBtn::before {
-  padding-right: 10px;
-  font-family: "Font Awesome 5 Pro";
-}
-header .headerTopContainer .headerRight .contactBtn::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  border: 2px solid #f8c2f4;
-  cursor: pointer;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-header .headerTopContainer .headerRight .contactBtn:hover {
-  background-color: #f0bade;
-}
-header .headerTopContainer .headerRight .contactBtn:hover::after {
-  top: 0;
-  left: 0;
 }
 header .headerBottomContainer {
   max-width: none;
@@ -780,6 +832,11 @@ header .headerBottomContainer nav ul li a.selected {
 .itemLineUp .sectionTitle::before, .itemLineUp .sectionTitle::after {
   background-color: #df6952;
 }
+.itemLineUp .notice .marker {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, transparent), color-stop(60%, #df6952));
+  background: -webkit-linear-gradient(transparent 60%, #df6952 60%);
+  background: linear-gradient(transparent 60%, #df6952 60%);
+}
 .itemLineUp .itemLineUpBody {
   margin-top: 60px;
 }
@@ -826,24 +883,6 @@ header .headerBottomContainer nav ul li a.selected {
 }
 .itemLineUp .itemLineUpBody .banduke.showTarget .bandukeinner p span {
   padding-bottom: 1rem;
-}
-.itemLineUp .itemLineUpBody h3 {
-  width: 115px;
-  margin: 0 auto;
-  text-align: center;
-  font-size: 20px;
-  color: #333;
-  position: relative;
-}
-.itemLineUp .itemLineUpBody h3::after {
-  content: "";
-  display: inline-block;
-  width: 100%;
-  height: 3px;
-  background-color: #df6952;
-  position: absolute;
-  bottom: -12px;
-  left: 0;
 }
 .itemLineUp .itemLineUpBody .itemLineUpLists {
   margin-top: 60px;
@@ -1062,25 +1101,6 @@ header .headerBottomContainer nav ul li a.selected {
 }
 
 /* pay  */
-.pay .container .payBody .notice {
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 60px;
-  padding: 1rem;
-  color: #fff;
-  border: 2px dashed #fff;
-  border-radius: 10px;
-  background-color: rgba(248, 147, 226, 0.7);
-  -webkit-box-shadow: 0 0 0 10px rgba(248, 147, 226, 0.7);
-          box-shadow: 0 0 0 10px rgba(248, 147, 226, 0.7);
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transform: translateY(100px);
-          transform: translateY(100px);
-  -webkit-transition: 2s;
-  transition: 2s;
-}
 .pay .container .payBody .notice.showTarget {
   opacity: 1;
   visibility: visible;
@@ -1190,6 +1210,93 @@ header .headerBottomContainer nav ul li a.selected {
 }
 
 /* contact  */
+.contact {
+  background-color: #ffcec5;
+}
+.contact .container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.contact .container .contactBody {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.contact .container .contactBody .contactTel {
+  width: 50%;
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+  border: 3px solid #333;
+}
+.contact .container .contactBody .contactTel h4 {
+  font-size: 18px;
+  position: relative;
+}
+.contact .container .contactBody .contactTel h4::after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 2px;
+  background-color: #f893e2;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.contact .container .contactBody .contactTel .tel {
+  margin: 30px 0;
+  font-size: 24px;
+  text-align: center;
+}
+.contact .container .contactBody .contactTel .telTime {
+  font-size: 15px;
+}
+.contact .container .contactBody .contactForm {
+  width: 50%;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  background-color: transparent;
+  border: 3px solid #fff;
+}
+.contact .container .contactBody .contactForm h4 {
+  font-size: 18px;
+  position: relative;
+}
+.contact .container .contactBody .contactForm h4::after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 2px;
+  background-color: #f893e2;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.contact .container .contactBody .contactForm .contactBtn {
+  margin: 30px auto;
+  width: 300px;
+  text-align: center;
+}
+.contact .container .contactBody .contactForm .contactBtn::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  border-top: 3px solid #333;
+  border-right: 3px solid #333;
+  -webkit-transform: translate(-20px, -50%) rotate(45deg);
+          transform: translate(-20px, -50%) rotate(45deg);
+}
 .contact .container form {
   margin-top: 60px;
 }
@@ -1205,6 +1312,7 @@ header .headerBottomContainer nav ul li a.selected {
   font-weight: 300;
   padding: 15px;
   margin-right: 20px;
+  text-align: right;
 }
 .contact .container form .formItem .label::after {
   content: "必須";
@@ -1216,6 +1324,7 @@ header .headerBottomContainer nav ul li a.selected {
   color: #fff;
   font-size: 11px;
   margin-left: 10px;
+  text-align: center;
 }
 .contact .container form .formItem .label.contactContets {
   vertical-align: top;
@@ -1452,9 +1561,20 @@ footer .container small {
 }
 @media screen and (max-width: 768px) {
   section {
-    margin: 120px 0;
+    margin-top: 150px;
+  }
+  section:last-of-type {
+    margin-bottom: 150px;
   }
 
+  .notice {
+    width: 100%;
+  }
+
+  .topVisual {
+    background-position: center;
+    position: relative;
+  }
   .topVisual .topVisualText h2 {
     font-size: 36px;
   }
@@ -1495,14 +1615,13 @@ footer .container small {
     font-size: 18px;
   }
   .concept .container .coceptBody .conceptImage {
-    width: 40%;
+    width: 60%;
     height: 300px;
     margin-left: auto;
   }
 
   .itemLineUp {
     padding-top: 60px;
-    margin-top: 0;
     margin-bottom: 0;
   }
   .itemLineUp .itemLineUpBody h3 {
@@ -1532,7 +1651,7 @@ footer .container small {
     width: 55px;
   }
   .itemLineUp .itemLineUpBody .itemLineUpLists > li a .itemLineUpPrice {
-    font-size: 24px;
+    font-size: 30px;
   }
   .itemLineUp .itemLineUpBody .itemLineUpLists > li a .itemLineUpPrice .marker {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, transparent), color-stop(60%, #f8c2f4));
@@ -1550,9 +1669,6 @@ footer .container small {
     display: none;
   }
 
-  .pay .container .payBody .notice {
-    width: 100%;
-  }
   .pay .container .payBody .payLists {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1577,9 +1693,36 @@ footer .container small {
     height: 60vw;
   }
 
+  .contact .container .contactBody {
+    display: block;
+  }
+  .contact .container .contactBody .contactTel {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+  .contact .container .contactBody .contactTel h4 {
+    font-size: 20px;
+  }
+  .contact .container .contactBody .contactTel .tel {
+    margin: 30px 0;
+    font-size: 24px;
+    text-align: center;
+  }
+  .contact .container .contactBody .contactTel .telTime {
+    font-size: 15px;
+  }
+  .contact .container .contactBody .contactForm {
+    width: 100%;
+  }
+  .contact .container .contactBody .contactForm h4 {
+    font-size: 20px;
+  }
   .contact .container form .formItem .label {
+    width: 210px;
     display: block;
     margin-bottom: 20px;
+    text-align: left;
   }
   .contact .container form .formItem input,
 .contact .container form .formItem textarea {
