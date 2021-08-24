@@ -130,13 +130,23 @@ function smoothScroll(event) {
     if(targetId.includes('/')) {
       targetId = targetId.replace('/', '');
     }
-  } else if(event.target.tagName === 'IMG') {
+  } 
+  
+  if(event.target.tagName === 'IMG') {
     targetId = 'header';
   }
   
   const duration = 1000;
+
+  let targetPosition;
+
   // スクロール先の左上地点を取得
-  const targetPosition = document.querySelector(targetId).offsetTop;
+  targetPosition = document.querySelector(targetId).offsetTop;
+  if(event.target.innerText === '支払方法') {
+  
+    targetPosition = 3367;
+  }
+  
   // カレント位置（クリックした位置）
   const startPosition = window.pageYOffset;
   // 距離(=スクロールをする移動距離)
@@ -144,7 +154,8 @@ function smoothScroll(event) {
   let distance;
   if(event.target.tagName === 'A') {
     distance = targetPosition - startPosition - 150;
-  } else if(event.target.tagName === 'IMG'){
+  }
+  if(event.target.tagName === 'IMG'){
     distance = targetPosition - startPosition;
   }
 
