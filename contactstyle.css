@@ -1,0 +1,102 @@
+/*  contactpage */
+.contactpage {
+  margin-top: 150px;
+  margin-bottom: 150px;
+  background-color: #fff;
+}
+.contactpage .container form {
+  margin-top: 60px;
+}
+.contactpage .container form .formItem {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.contactpage .container form .formItem .label {
+  display: inline-block;
+  width: 250px;
+  background-color: #f8c2f4;
+  color: #fff;
+  font-weight: 300;
+  padding: 15px;
+  margin-right: 20px;
+  text-align: right;
+}
+.contactpage .container form .formItem .label::after {
+  content: "必須";
+  display: inline-block;
+  width: 50px;
+  padding: 5px;
+  background-color: red;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 11px;
+  margin-left: 10px;
+  text-align: center;
+}
+.contactpage .container form .formItem .label.contactContets {
+  vertical-align: top;
+}
+.contactpage .container form .formItem input,
+.contactpage .container form .formItem textarea {
+  display: inline-block;
+  padding: 13px;
+  width: 300px;
+}
+.contactpage .container form .formItem textarea {
+  height: 150px;
+}
+.contactpage .container .submit {
+  width: 300px;
+  margin: 0 auto;
+  position: relative;
+}
+.contactpage .container .submit::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  border: 2px solid #f8c2f4;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.contactpage .container .submit::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  border-top: 3px solid #333;
+  border-right: 3px solid #333;
+  -webkit-transform: translate(-20px, -50%) rotate(45deg);
+          transform: translate(-20px, -50%) rotate(45deg);
+}
+.contactpage .container .submit input[type=submit] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #eee;
+  border: 0;
+  letter-spacing: 3px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.contactpage .container .submit:hover::before {
+  top: 0;
+  left: 0;
+}
+.contactpage .container .submit:hover input[type=submit] {
+  background-color: #f0bade;
+}
