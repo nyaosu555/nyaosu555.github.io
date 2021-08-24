@@ -1,3 +1,5 @@
+'use strict';
+{
 
 // ハンバーガーメニュー処理
 const spMenuIcon = document.getElementById('spMenuIcon');
@@ -11,7 +13,6 @@ spMenuIcon.addEventListener('click', function() {
 
 // トップへ戻る機能
 
-  
   const menuLists = document.querySelectorAll('.home header .headerBottomContainer > nav ul li a');
   
   menuLists.forEach(function(menuList) {
@@ -24,7 +25,6 @@ spMenuIcon.addEventListener('click', function() {
     smoothScroll(event);
   });
   
-
 // 各メニューリストをクリックした時にメニューを閉じる処理
 // forEachを使った場合
 menuLists.forEach(function(menulist) {
@@ -142,11 +142,14 @@ function smoothScroll(event) {
 
   // スクロール先の左上地点を取得
   targetPosition = document.querySelector(targetId).offsetTop;
-  if(event.target.innerText === '支払方法') {
-  
-    targetPosition = 3367;
-  }
-  
+console.log(targetId)
+console.log(targetPosition)
+  // if(targetItemLiElements[0].classList.contains('showTarget')) {
+  //   targetPosition = document.querySelector(targetId).offsetTop;
+  // }else {
+  //     targetPosition = document.querySelector(targetId).offsetTop + 550;
+  // }
+ 
   // カレント位置（クリックした位置）
   const startPosition = window.pageYOffset;
   // 距離(=スクロールをする移動距離)
@@ -176,5 +179,7 @@ function smoothScroll(event) {
     t--;
     return -c/2 * (t*(t-2) - 1) + b;
   };
+
+}
 
 }
