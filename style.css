@@ -1297,14 +1297,21 @@ header .headerBottomContainer nav ul li a.selected {
   -webkit-transform: translate(-20px, -50%) rotate(45deg);
           transform: translate(-20px, -50%) rotate(45deg);
 }
-.contact .container form {
+
+/*  contactpage */
+.contactpage {
+  margin-top: 150px;
+  margin-bottom: 150px;
+  background-color: #fff;
+}
+.contactpage .container form {
   margin-top: 60px;
 }
-.contact .container form .formItem {
+.contactpage .container form .formItem {
   margin-bottom: 30px;
   text-align: center;
 }
-.contact .container form .formItem .label {
+.contactpage .container form .formItem .label {
   display: inline-block;
   width: 250px;
   background-color: #f8c2f4;
@@ -1314,7 +1321,7 @@ header .headerBottomContainer nav ul li a.selected {
   margin-right: 20px;
   text-align: right;
 }
-.contact .container form .formItem .label::after {
+.contactpage .container form .formItem .label::after {
   content: "必須";
   display: inline-block;
   width: 50px;
@@ -1326,24 +1333,24 @@ header .headerBottomContainer nav ul li a.selected {
   margin-left: 10px;
   text-align: center;
 }
-.contact .container form .formItem .label.contactContets {
+.contactpage .container form .formItem .label.contactContets {
   vertical-align: top;
 }
-.contact .container form .formItem input,
-.contact .container form .formItem textarea {
+.contactpage .container form .formItem input,
+.contactpage .container form .formItem textarea {
   display: inline-block;
   padding: 13px;
   width: 300px;
 }
-.contact .container form .formItem textarea {
+.contactpage .container form .formItem textarea {
   height: 150px;
 }
-.contact .container .submit {
+.contactpage .container .submit {
   width: 300px;
   margin: 0 auto;
   position: relative;
 }
-.contact .container .submit::before {
+.contactpage .container .submit::before {
   content: "";
   width: 100%;
   height: 100%;
@@ -1355,7 +1362,7 @@ header .headerBottomContainer nav ul li a.selected {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-.contact .container .submit::after {
+.contactpage .container .submit::after {
   content: "";
   width: 10px;
   height: 10px;
@@ -1367,7 +1374,7 @@ header .headerBottomContainer nav ul li a.selected {
   -webkit-transform: translate(-20px, -50%) rotate(45deg);
           transform: translate(-20px, -50%) rotate(45deg);
 }
-.contact .container .submit input[type=submit] {
+.contactpage .container .submit input[type=submit] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1386,11 +1393,11 @@ header .headerBottomContainer nav ul li a.selected {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-.contact .container .submit:hover::before {
+.contactpage .container .submit:hover::before {
   top: 0;
   left: 0;
 }
-.contact .container .submit:hover input[type=submit] {
+.contactpage .container .submit:hover input[type=submit] {
   background-color: #f0bade;
 }
 
@@ -1718,14 +1725,15 @@ footer .container small {
   .contact .container .contactBody .contactForm h4 {
     font-size: 20px;
   }
-  .contact .container form .formItem .label {
+
+  .contactpage .container form .formItem .label {
     width: 210px;
     display: block;
     margin-bottom: 20px;
     text-align: left;
   }
-  .contact .container form .formItem input,
-.contact .container form .formItem textarea {
+  .contactpage .container form .formItem input,
+.contactpage .container form .formItem textarea {
     width: 100%;
   }
 }
