@@ -1,6 +1,10 @@
 'use strict';
 {
 
+
+  
+
+
 // ハンバーガーメニュー処理
 const spMenuIcon = document.getElementById('spMenuIcon');
 
@@ -57,6 +61,8 @@ let showTargetresults = [
   conceptImage,
   banduke,
 ];
+
+console.log(showTargetresults)
 
 for (let i = 0; i < targetItemLiElements.length; i++) {
   targetItemLiElements[i].style.animationDelay = '' + (i * .5) + 's';
@@ -141,14 +147,10 @@ function smoothScroll(event) {
   let targetPosition;
 
   // スクロール先の左上地点を取得
-  targetPosition = document.querySelector(targetId).offsetTop;
-console.log(targetId)
-console.log(targetPosition)
-  // if(targetItemLiElements[0].classList.contains('showTarget')) {
-  //   targetPosition = document.querySelector(targetId).offsetTop;
-  // }else {
-  //     targetPosition = document.querySelector(targetId).offsetTop + 550;
-  // }
+
+    targetPosition = document.querySelector(targetId).offsetTop;
+
+
  
   // カレント位置（クリックした位置）
   const startPosition = window.pageYOffset;
@@ -156,7 +158,7 @@ console.log(targetPosition)
   
   let distance;
   if(event.target.tagName === 'A') {
-    distance = targetPosition - startPosition - 150;
+    distance = targetPosition - startPosition;
   }
   if(event.target.tagName === 'IMG'){
     distance = targetPosition - startPosition;
