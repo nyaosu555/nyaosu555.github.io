@@ -645,20 +645,14 @@ header .headerBottomContainer nav ul li a.selected {
   -webkit-transition: 2s;
   transition: 2s;
 }
-.infomation .container .infomations.showTarget {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-}
-.infomation .container .infomations.showTarget .infomationDate {
+.infomation .container .infomations .infomationDate {
   color: #fff;
   font-size: 15px;
   width: 35%;
   padding: 10px 10px 10px 50px;
   position: relative;
 }
-.infomation .container .infomations.showTarget .infomationDate.new::before {
+.infomation .container .infomations .infomationDate.new::before {
   content: "NEW";
   display: inline-block;
   font-size: 10px;
@@ -690,10 +684,16 @@ header .headerBottomContainer nav ul li a.selected {
     top: -5px;
   }
 }
-.infomation .container .infomations.showTarget .infomationItem {
+.infomation .container .infomations .infomationItem {
   color: #fff;
   width: 65%;
   padding: 10px;
+}
+.infomation .container .infomations.showTarget {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 /* concept */
@@ -754,17 +754,11 @@ header .headerBottomContainer nav ul li a.selected {
   -webkit-transition: 2s;
   transition: 2s;
 }
-.concept .container .coceptBody .conceptText.showTarget {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-}
-.concept .container .coceptBody .conceptText.showTarget .conceptTitle {
+.concept .container .coceptBody .conceptText .conceptTitle {
   font-size: 20px;
   font-weight: 700;
 }
-.concept .container .coceptBody .conceptText.showTarget p.quote {
+.concept .container .coceptBody .conceptText p.quote {
   font-size: 20px;
   text-align: center;
   margin-top: 20px;
@@ -773,7 +767,7 @@ header .headerBottomContainer nav ul li a.selected {
   -webkit-transform: skew(-15deg);
           transform: skew(-15deg);
 }
-.concept .container .coceptBody .conceptText.showTarget p.quote::before {
+.concept .container .coceptBody .conceptText p.quote::before {
   content: "";
   display: block;
   margin-right: 10px;
@@ -781,6 +775,12 @@ header .headerBottomContainer nav ul li a.selected {
   top: -5px;
   left: 0;
   font-family: "Font Awesome 5 Pro";
+}
+.concept .container .coceptBody .conceptText.showTarget {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 .concept .container .coceptBody .conceptImage {
   width: 40%;
@@ -797,13 +797,7 @@ header .headerBottomContainer nav ul li a.selected {
   -webkit-transition: 2s 1s;
   transition: 2s 1s;
 }
-.concept .container .coceptBody .conceptImage.showTarget {
-  oipacity: 1;
-  visbility: visible;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-}
-.concept .container .coceptBody .conceptImage.showTarget::after {
+.concept .container .coceptBody .conceptImage::after {
   content: "";
   display: block;
   width: 20%;
@@ -818,6 +812,12 @@ header .headerBottomContainer nav ul li a.selected {
   left: 50%;
   -webkit-transform: translate(-50%, -50%) rotate(30deg);
           transform: translate(-50%, -50%) rotate(30deg);
+}
+.concept .container .coceptBody .conceptImage.showTarget {
+  oipacity: 1;
+  visbility: visible;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 /* itemLineUp  */
@@ -886,7 +886,6 @@ header .headerBottomContainer nav ul li a.selected {
 }
 .itemLineUp .itemLineUpBody .itemLineUpLists {
   margin-top: 60px;
-  margin-bottom: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -912,18 +911,12 @@ header .headerBottomContainer nav ul li a.selected {
   position: relative;
   opacity: 0;
   visibility: hidden;
-  -webkit-transform: translateY(100px);
-          transform: translateY(100px);
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
   -webkit-transition: 2s;
   transition: 2s;
 }
-.itemLineUp .itemLineUpBody .itemLineUpLists > li.showTarget {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-}
-.itemLineUp .itemLineUpBody .itemLineUpLists > li.showTarget::before {
+.itemLineUp .itemLineUpBody .itemLineUpLists > li::before {
   content: "";
   display: block;
   width: 50px;
@@ -937,16 +930,16 @@ header .headerBottomContainer nav ul li a.selected {
           transform: translateX(-50%);
   z-index: 1;
 }
-.itemLineUp .itemLineUpBody .itemLineUpLists > li.showTarget:first-of-type::before {
+.itemLineUp .itemLineUpBody .itemLineUpLists > li:first-of-type::before {
   background-image: url(img/pin.png);
 }
-.itemLineUp .itemLineUpBody .itemLineUpLists > li.showTarget:nth-of-type(2)::before {
+.itemLineUp .itemLineUpBody .itemLineUpLists > li:nth-of-type(2)::before {
   background-image: url(img/pin_blue.png);
 }
-.itemLineUp .itemLineUpBody .itemLineUpLists > li.showTarget:nth-of-type(3)::before {
+.itemLineUp .itemLineUpBody .itemLineUpLists > li:nth-of-type(3)::before {
   background-image: url(img/pin_yellow.png);
 }
-.itemLineUp .itemLineUpBody .itemLineUpLists > li.showTarget a {
+.itemLineUp .itemLineUpBody .itemLineUpLists > li a {
   display: block;
   width: 100%;
   height: 100%;
@@ -954,7 +947,7 @@ header .headerBottomContainer nav ul li a.selected {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
-.itemLineUp .itemLineUpBody .itemLineUpLists > li.showTarget a .itemLineUpImage {
+.itemLineUp .itemLineUpBody .itemLineUpLists > li a .itemLineUpImage {
   width: 100%;
   height: 0;
   padding-top: 58.6%;
@@ -968,18 +961,18 @@ header .headerBottomContainer nav ul li a.selected {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
-.itemLineUp .itemLineUpBody .itemLineUpLists > li.showTarget a:hover .itemLineUpImage {
+.itemLineUp .itemLineUpBody .itemLineUpLists > li a:hover .itemLineUpImage {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   opacity: 0.7;
 }
-.itemLineUp .itemLineUpBody .itemLineUpLists > li.showTarget a h4 {
+.itemLineUp .itemLineUpBody .itemLineUpLists > li a h4 {
   margin-top: 20px;
   padding: 10px;
   letter-spacing: 3px;
   position: relative;
 }
-.itemLineUp .itemLineUpBody .itemLineUpLists > li.showTarget a h4::before {
+.itemLineUp .itemLineUpBody .itemLineUpLists > li a h4::before {
   content: attr(data-en);
   display: block;
   color: #ffcec5;
@@ -988,7 +981,7 @@ header .headerBottomContainer nav ul li a.selected {
   top: -10px;
   left: 10px;
 }
-.itemLineUp .itemLineUpBody .itemLineUpLists > li.showTarget a h4::after {
+.itemLineUp .itemLineUpBody .itemLineUpLists > li a h4::after {
   content: "";
   display: block;
   width: 40px;
@@ -998,12 +991,12 @@ header .headerBottomContainer nav ul li a.selected {
   bottom: 0;
   left: 10px;
 }
-.itemLineUp .itemLineUpBody .itemLineUpLists > li.showTarget a .itemLineUpDescription {
+.itemLineUp .itemLineUpBody .itemLineUpLists > li a .itemLineUpDescription {
   font-size: 15px;
   padding: 10px;
   position: relative;
 }
-.itemLineUp .itemLineUpBody .itemLineUpLists > li.showTarget a .itemLineUpDescription::after {
+.itemLineUp .itemLineUpBody .itemLineUpLists > li a .itemLineUpDescription::after {
   content: "";
   display: block;
   width: 40px;
@@ -1013,33 +1006,33 @@ header .headerBottomContainer nav ul li a.selected {
   bottom: 0;
   left: 10px;
 }
-.itemLineUp .itemLineUpBody .itemLineUpLists > li.showTarget a .itemLineUpPrice {
+.itemLineUp .itemLineUpBody .itemLineUpLists > li a .itemLineUpPrice {
   font-size: 20px;
   font-weight: 500;
   padding: 10px;
 }
-.itemLineUp .itemLineUpBody .itemLineUpLists > li.showTarget a .itemLineUpPrice .marker {
+.itemLineUp .itemLineUpBody .itemLineUpLists > li a .itemLineUpPrice .marker {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, transparent), color-stop(60%, #ffcec5));
   background: -webkit-linear-gradient(transparent 60%, #ffcec5 60%);
   background: linear-gradient(transparent 60%, #ffcec5 60%);
 }
-.itemLineUp .itemLineUpBody .itemLineUpLists > li.showTarget a .popularity {
+.itemLineUp .itemLineUpBody .itemLineUpLists > li a .popularity {
   padding: 10px;
 }
-.itemLineUp .itemLineUpBody .itemLineUpLists > li.showTarget a .popularity span {
+.itemLineUp .itemLineUpBody .itemLineUpLists > li a .popularity span {
   display: inline-block;
   width: 10px;
   height: 10px;
   border: 1px solid #333;
 }
-.itemLineUp .itemLineUpBody .itemLineUpLists > li.showTarget a .popularity span.full {
+.itemLineUp .itemLineUpBody .itemLineUpLists > li a .popularity span.full {
   background-color: #333;
 }
-.itemLineUp .itemLineUpBody .itemLineUpLists > li.showTarget a .popularity span.half {
+.itemLineUp .itemLineUpBody .itemLineUpLists > li a .popularity span.half {
   background-color: #333;
   position: relative;
 }
-.itemLineUp .itemLineUpBody .itemLineUpLists > li.showTarget a .popularity span.half::after {
+.itemLineUp .itemLineUpBody .itemLineUpLists > li a .popularity span.half::after {
   content: "";
   width: 50%;
   height: 100%;
@@ -1048,19 +1041,19 @@ header .headerBottomContainer nav ul li a.selected {
   top: 0;
   left: 50%;
 }
-.itemLineUp .itemLineUpBody .itemLineUpLists > li.showTarget a .popularity span.empty {
+.itemLineUp .itemLineUpBody .itemLineUpLists > li a .popularity span.empty {
   background-color: #eee;
 }
-.itemLineUp .itemLineUpBody .itemLineUpLists > li.showTarget:first-of-type a .itemLineUpImage {
+.itemLineUp .itemLineUpBody .itemLineUpLists > li:first-of-type a .itemLineUpImage {
   background-image: url(img/komusubi.jpg);
 }
-.itemLineUp .itemLineUpBody .itemLineUpLists > li.showTarget:nth-of-type(2) a .itemLineUpImage {
+.itemLineUp .itemLineUpBody .itemLineUpLists > li:nth-of-type(2) a .itemLineUpImage {
   background-image: url(img/oozeki.jpg);
 }
-.itemLineUp .itemLineUpBody .itemLineUpLists > li.showTarget:nth-of-type(3) a .itemLineUpImage {
+.itemLineUp .itemLineUpBody .itemLineUpLists > li:nth-of-type(3) a .itemLineUpImage {
   background-image: url(img/yokoduna.jpg);
 }
-.itemLineUp .itemLineUpBody .itemLineUpLists > li.showTarget .tagLists {
+.itemLineUp .itemLineUpBody .itemLineUpLists > li .tagLists {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1071,11 +1064,11 @@ header .headerBottomContainer nav ul li a.selected {
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
 }
-.itemLineUp .itemLineUpBody .itemLineUpLists > li.showTarget .tagLists li {
+.itemLineUp .itemLineUpBody .itemLineUpLists > li .tagLists li {
   width: 20%;
   margin-left: 10px;
 }
-.itemLineUp .itemLineUpBody .itemLineUpLists > li.showTarget .tagLists li a {
+.itemLineUp .itemLineUpBody .itemLineUpLists > li .tagLists li a {
   display: inline-block;
   padding: 5px;
   font-size: 13px;
@@ -1096,8 +1089,14 @@ header .headerBottomContainer nav ul li a.selected {
   letter-spacing: 3px;
   background-color: #fff;
 }
-.itemLineUp .itemLineUpBody .itemLineUpLists > li.showTarget .tagLists li a:hover {
+.itemLineUp .itemLineUpBody .itemLineUpLists > li .tagLists li a:hover {
   opacity: 0.7;
+}
+.itemLineUp .itemLineUpBody .itemLineUpLists > li.showTarget {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 /* pay  */
