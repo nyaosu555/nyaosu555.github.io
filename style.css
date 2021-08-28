@@ -853,13 +853,7 @@ header .headerBottomContainer nav ul li a.selected {
   -webkit-transition: 2s;
   transition: 2s;
 }
-.itemLineUp .itemLineUpBody .banduke.showTarget {
-  opacity: 1;
-  visbility: visible;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-}
-.itemLineUp .itemLineUpBody .banduke.showTarget .bandukeinner {
+.itemLineUp .itemLineUpBody .banduke .bandukeinner {
   width: 100%;
   padding: 10px;
   border: 1px solid #000;
@@ -881,8 +875,14 @@ header .headerBottomContainer nav ul li a.selected {
   font-family: "Potta One", sans-serif;
   font-size: 20px;
 }
-.itemLineUp .itemLineUpBody .banduke.showTarget .bandukeinner p span {
+.itemLineUp .itemLineUpBody .banduke .bandukeinner p span {
   padding-bottom: 1rem;
+}
+.itemLineUp .itemLineUpBody .banduke.showTarget {
+  opacity: 1;
+  visbility: visible;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 .itemLineUp .itemLineUpBody .itemLineUpLists {
   margin-top: 60px;
@@ -1100,12 +1100,6 @@ header .headerBottomContainer nav ul li a.selected {
 }
 
 /* pay  */
-.pay .container .payBody .notice.showTarget {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-}
 .pay .container .payBody .payLists {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1126,7 +1120,7 @@ header .headerBottomContainer nav ul li a.selected {
 }
 .pay .container .payBody .payLists li img {
   display: block;
-  width: 30%;
+  width: 50%;
   margin: 0 auto 30px;
 }
 .pay .container .payBody .payLists li.showTarget {
@@ -1593,14 +1587,14 @@ footer .container small {
   .infomation .container {
     width: 100%;
   }
-  .infomation .container .infomations.showTarget {
+  .infomation .container .infomations {
     display: block;
   }
-  .infomation .container .infomations.showTarget .infomationDate {
+  .infomation .container .infomations .infomationDate {
     width: 100%;
     font-size: 13px;
   }
-  .infomation .container .infomations.showTarget .infomationItem {
+  .infomation .container .infomations .infomationItem {
     width: 100%;
     padding-left: 50px;
     border-bottom: 1px solid #fff;
@@ -1677,15 +1671,13 @@ footer .container small {
   }
 
   .pay .container .payBody .payLists {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    display: block;
+  }
+  .pay .container .payBody .payLists li {
+    margin: 0 auto 60px;
   }
   .pay .container .payBody .payLists li img {
-    width: 50%;
+    width: 100%;
   }
 
   .access .container .accessBody .shopInfo {
