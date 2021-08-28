@@ -32,10 +32,14 @@ spMenuIcon.addEventListener('click', function() {
 // 各メニューリストをクリックした時にメニューを閉じる処理
 // forEachを使った場合
 menuLists.forEach(function(menulist) {
-  menulist.addEventListener('click', function() {
+  menulist.addEventListener('click', function(event) {
     document.querySelector('header .headerBottomContainer').classList.remove('active');
     document.getElementById('spMenuIcon').classList.remove('active');
     document.querySelector('#mask').classList.remove('active');
+
+    if(document.querySelector('body').classList.contains('home')) {
+      smoothScroll(event);
+    } 
   });
 });
 
@@ -62,29 +66,16 @@ let showTargetresults = [
   banduke,
 ];
 
-console.log(showTargetresults)
-
-for (let i = 0; i < targetItemLiElements.length; i++) {
-  targetItemLiElements[i].style.animationDelay = '' + (i * .5) + 's';
-}
-
-for (let i = 0; i < targetPayLiElements.length; i++) {
-  targetPayLiElements[i].style.animationDelay = '' + (i * .5) + 's';
-}
-
-
-if(document.querySelector('body').classList.contains('home')) {  
-
   window.addEventListener('scroll', function(e) {
     
     if(navigator.userAgent.toLowerCase().match(/webkit|msie 5/)) {
-    if(navigator.userAgent.indexOf('Chrome') !== -1) {
-      scrollYNum = window.scrollY;
+      if(navigator.userAgent.indexOf('Chrome') !== -1) {
+        scrollYNum = window.scrollY;
+      } else {
+        scrollYNum = window.scrollY;
+      }
     } else {
-      scrollYNum = window.scrollY;
-    }
-    } else {
-    scrollYNum = document.documentElement.scrollTop;
+      scrollYNum = document.documentElement.scrollTop;
     }
   
   // トップへ戻るボタンを表示する
@@ -94,6 +85,12 @@ if(document.querySelector('body').classList.contains('home')) {
       document.getElementById('topBackButton').classList.remove('active');
     }
 
+
+    if(document.querySelector('body').classList.contains('contactPage')) {
+      return
+    } else {
+
+    
     for (let i = 0; i < showTargetresults.length; i++) {
       const showTargetElements = showTargetresults[i].getBoundingClientRect().top + showTargetresults[i].clientHeight * .2;
       if(window.innerHeight > showTargetElements) {
@@ -101,6 +98,7 @@ if(document.querySelector('body').classList.contains('home')) {
       }
     }
     for (let i = 0; i < targetItemLiElements.length; i++) {
+      targetItemLiElements[i].style.animationDelay = '' + (i * .5) + 's';
       const showTargetElements = targetItemLiElements[i].getBoundingClientRect().top + targetItemLiElements[i].clientHeight * .2;
       if(window.innerHeight > showTargetElements) {
         targetItemLiElements[i].classList.add('showTarget');
@@ -108,6 +106,7 @@ if(document.querySelector('body').classList.contains('home')) {
     }
     
     for (let i = 0; i < targetPayLiElements.length; i++) {
+      targetPayLiElements[i].style.animationDelay = '' + (i * .5) + 's';
       const showTargetElements = targetPayLiElements[i].getBoundingClientRect().top + targetPayLiElements[i].clientHeight * .2;
       if(window.innerHeight > showTargetElements) {
         targetPayLiElements[i].classList.add('showTarget');
@@ -120,12 +119,13 @@ if(document.querySelector('body').classList.contains('home')) {
         notices[i].classList.add('showTarget');
       }
     }
-  
+  }
   });
-}
+// }
+
 
 function smoothScroll(event) {
-
+ 
   event.preventDefault();
 
   let requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
@@ -142,16 +142,15 @@ function smoothScroll(event) {
     targetId = 'header';
   }
   
-  const duration = 1000;
+  let duration = 1000;
 
   let targetPosition;
 
-  // スクロール先の左上地点を取得
+  // スクロール先の左上地点を取得 + ヘッダーの高さ
 
-    targetPosition = document.querySelector(targetId).offsetTop;
+  targetPosition = document.querySelector(targetId).offsetTop;
+  // console.log(targetPosition)
 
-
- 
   // カレント位置（クリックした位置）
   const startPosition = window.pageYOffset;
   // 距離(=スクロールをする移動距離)
@@ -163,11 +162,11 @@ function smoothScroll(event) {
   if(event.target.tagName === 'IMG'){
     distance = targetPosition - startPosition;
   }
-
+  
   let start = null;
-
+  
   requestAnimationFrame(step);
-
+  
   function step(timestamp) {
     if(!start) start = timestamp;
     const progress = timestamp - start;
@@ -181,7 +180,7 @@ function smoothScroll(event) {
     t--;
     return -c/2 * (t*(t-2) - 1) + b;
   };
-
+    
 }
 
 }
