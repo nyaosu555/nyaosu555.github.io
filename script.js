@@ -147,7 +147,7 @@ function smoothScroll(event) {
   // スクロール先の左上地点を取得 + ヘッダーの高さ
 
   targetPosition = document.querySelector(targetId).offsetTop - 130;
-  console.log(targetPosition)
+  // console.log(targetPosition)
 
   // カレント位置（クリックした位置）
   const startPosition = window.pageYOffset;
