@@ -2,9 +2,6 @@
 {
 
 
-  
-
-
 // ハンバーガーメニュー処理
 const spMenuIcon = document.getElementById('spMenuIcon');
 
@@ -19,11 +16,11 @@ spMenuIcon.addEventListener('click', function() {
 
   const menuLists = document.querySelectorAll('.home header .headerBottomContainer > nav ul li a');
   
-  menuLists.forEach(function(menuList) {
-    menuList.addEventListener('click', function(event) {
-      smoothScroll(event);
-    });
-  });
+  // menuLists.forEach(function(menuList) {
+  //   menuList.addEventListener('click', function(event) {
+  //     smoothScroll(event);
+  //   });
+  // });
 
   document.getElementById('topBackButton').addEventListener('click', function(event) {
     smoothScroll(event);
@@ -124,6 +121,7 @@ let showTargetresults = [
 // }
 
 
+
 function smoothScroll(event) {
  
   event.preventDefault();
@@ -148,7 +146,7 @@ function smoothScroll(event) {
 
   // スクロール先の左上地点を取得 + ヘッダーの高さ
 
-  targetPosition = document.querySelector(targetId).offsetTop;
+  targetPosition = document.querySelector(targetId).offsetTop - 130;
   console.log(targetPosition)
 
   // カレント位置（クリックした位置）

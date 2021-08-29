@@ -1109,25 +1109,27 @@ header .headerBottomContainer nav ul li a.selected {
           align-items: flex-end;
 }
 .pay .container .payBody .payLists li {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   width: 50%;
+  height: 155px;
   text-align: center;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transform: translateY(100px);
-          transform: translateY(100px);
-  -webkit-transition: 2s;
-  transition: 2s;
-}
-.pay .container .payBody .payLists li img {
-  display: block;
-  width: 50%;
-  margin: 0 auto 30px;
-}
-.pay .container .payBody .payLists li.showTarget {
   opacity: 1;
-  visibility: visible;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  position: relative;
+}
+.pay .container .payBody .payLists li:first-of-type {
+  background-image: url(img/creditcard.png);
+}
+.pay .container .payBody .payLists li:nth-of-type(2) {
+  background-image: url(img/pay.png);
+}
+.pay .container .payBody .payLists li h4 {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 30px);
+          transform: translate(-50%, 30px);
 }
 
 /* access  */
@@ -1675,6 +1677,7 @@ footer .container small {
   }
   .pay .container .payBody .payLists li {
     margin: 0 auto 60px;
+    width: 100%;
   }
   .pay .container .payBody .payLists li img {
     width: 100%;
