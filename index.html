@@ -35,7 +35,7 @@
           <ul>
             <li><a href="#top" class="selected fas fa-home">トップ</a></li>
             <li><a href="#itemLineUp" class="fas fa-shopping-cart">商品ラインナップ</a></li>
-            <li><a href="#payList" class="far fa-credit-card">支払方法</a></li>
+            <li><a href="#pay" class="far fa-credit-card">支払方法</a></li>
             <li><a href="#access" class="fas fa-map-marker-alt">アクセス</a></li>
             <li><a href="#contact" class="far fa-envelope">お問い合わせ</a></li>
           </ul>
@@ -88,7 +88,7 @@
 
       <section class="itemLineUp" id="itemLineUp">
         <div class="container">
-          <h2 class="sectionTitle">商品ラインナップ</h2>
+          <h2 class="sectionTitle">商品ラインナップ1</h2>
           <h3 class="itemLineUpSubTitle">はじめてのお客さまへ</h3>
           <p class="notice">
             当店では<span class="marker">「日替わりで商品を3つ」</span>という販売方法を取らせていただいております。
@@ -164,22 +164,20 @@
         </div>
       </section>
 
-      <section class="pay"  id="payList">
+      <section class="pay" id="pay">
         <div class="container">
           <h2 class="sectionTitle">お支払方法</h2>
           <p class="notice">開店間もない状況と時節柄、お支払いの方法はキャッシュレスのみでのご対応とさせていただきます。ご理解くださませ。
           </p>
           <div class="payBody">
-            <ul class="payLists">
-              <li>
-                <img src="img/creditcard.png" alt="クレジットカードのアイコン">
-                <h4>クレジットカード決済</h4>
-              </li>
-              <li>
-                <img src="img/pay.png" alt="QRコード、バーコード決済のアイコン">
-                <h4>QRコード、バーコード決済</h4>
-              </li>
-            </ul>
+            <div class="payCard">
+              <h4 class="far fa-credit-card">クレジットカードでのお支払い</h4>
+              <p class="tel">各種カードお取り扱いあります。</p>
+            </div>
+            <div class="payQR">
+              <h4 class="fas fa-qrcode">QRコード・バーコード決済</h4>
+              <p class="tel">各種決済お取り扱いあります。</p>
+            </div>
           </div>
         </div>
       </section>
@@ -222,28 +220,28 @@
               <a href="https://nyaosu555.github.io/contact.html" class="contactBtn">お問い合わせフォームへ</a>
             </div>
           </div>
-          <!-- <form action="" method="">
-            <div class="formItem">
-              <label class="label" for="name">名前</label>
-              <input type="text" name="name" id="name">
-            </div>
-            
-            <div class="formItem">
-              <label class="label" for="mail">メールアドレス</label>
-              <input type="email" name="mail" id="mail">
-            </div>
-              
-            <div class="formItem">
-              <label class="label contactContets" for="contactContets">お問い合わせ</label>
-              <textarea name="contactContets" id="contactContets"></textarea>
-            </div>
-            
-            <div class="submit">
-              <input type="submit" value="送信" >
-            </div>
-          </form> -->
         </div>
       </section>
+
+      <!-- <section class="pay"  id="payList">
+        <div class="container">
+          <h2 class="sectionTitle">お支払方法</h2>
+          <p class="notice">開店間もない状況と時節柄、お支払いの方法はキャッシュレスのみでのご対応とさせていただきます。ご理解くださませ。
+          </p>
+          <div class="payBody">
+            <ul class="payLists">
+              <li>
+                <img src="img/creditcard.png" alt="クレジットカードのアイコン">
+                <h4>クレジットカード決済</h4>
+              </li>
+              <li>
+                <img src="img/pay.png" alt="QRコード、バーコード決済のアイコン">
+                <h4>QRコード、バーコード決済</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section> -->
 
       <div class="topBackButton" id="topBackButton">
         <img src="img/goTop.png" alt="お相撲さんのイラスト">
