@@ -493,6 +493,25 @@ header .headerTopContainer .headerLeft .tagLine {
   font-weight: 300;
   margin-left: 1rem;
 }
+header .headerTopContainer .headerLeft .headerDot {
+  width: 225px;
+  color: #333;
+  font-size: 12px;
+  opacity: 0.5;
+  font-weight: 300;
+  margin-left: 2rem;
+}
+header .headerTopContainer .headerLeft .headerDot .fa-external-link-alt {
+  font-family: "M PLUS 1p", sans-serif;
+  position: relative;
+  text-decoration: underline;
+}
+header .headerTopContainer .headerLeft .headerDot .fa-external-link-alt::before {
+  font-family: "Font Awesome 5 Pro";
+  position: absolute;
+  top: -1px;
+  right: -15px;
+}
 header .headerTopContainer .headerRight {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -617,6 +636,27 @@ header .headerBottomContainer nav ul li a.selected {
   font-size: 18px;
   font-weight: 700;
   text-shadow: 2px 1px 0px rgba(248, 147, 226, 0.7);
+}
+
+.mainDot {
+  margin: 50px auto;
+  width: 70%;
+  padding: 0 20px;
+  text-align: center;
+  display: none;
+}
+.mainDot .mainDotA {
+  font-size: 12px;
+}
+.mainDot .fa-external-link-alt {
+  font-size: 12px;
+  position: relative;
+  text-decoration: underline;
+}
+.mainDot .fa-external-link-alt::before {
+  position: absolute;
+  top: -1px;
+  right: -20px;
 }
 
 /* infomation  */
@@ -1105,6 +1145,9 @@ header .headerBottomContainer nav ul li a.selected {
   padding-bottom: 0;
 }
 .pay .container .payBody {
+  width: 100%;
+}
+.pay .container .payBody .payLists {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1112,74 +1155,37 @@ header .headerBottomContainer nav ul li a.selected {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.pay .container .payBody .payCard {
+.pay .container .payBody .payLists li {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   width: 50%;
-  padding: 20px;
   text-align: center;
-  background-color: #fff;
-  border: 3px solid #333;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  -webkit-transition: 2s;
+  transition: 2s;
 }
-.pay .container .payBody .payCard h4 {
-  font-size: 24px;
-  position: relative;
-  font-weight: 500;
-}
-.pay .container .payBody .payCard h4::after {
-  content: "";
+.pay .container .payBody .payLists li img {
   display: block;
-  width: 200px;
-  height: 2px;
-  background-color: #f893e2;
+  width: auto;
+  height: 150px;
+  margin: 0 auto 30px;
+}
+.pay .container .payBody .payLists li h4 {
   position: absolute;
-  bottom: -5px;
+  bottom: 0;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -webkit-transform: translate(-50%, 30px);
+          transform: translate(-50%, 30px);
 }
-.pay .container .payBody .payCard .fa-credit-card::before {
-  font-family: "Font Awesome 5 Pro";
-  padding-right: 1rem;
-}
-.pay .container .payBody .payCard .tel {
-  margin: 30px 0;
-  font-size: 18px;
-  text-align: center;
-  font-weight: 300;
-}
-.pay .container .payBody .payQR {
-  width: 50%;
-  padding: 20px;
-  text-align: center;
-  color: #fff;
-  background-color: #333;
-  border: 3px solid #666;
-}
-.pay .container .payBody .payQR h4 {
-  font-size: 24px;
-  position: relative;
-  font-weight: 500;
-}
-.pay .container .payBody .payQR h4::after {
-  content: "";
-  display: block;
-  width: 200px;
-  height: 2px;
-  background-color: #f893e2;
-  position: absolute;
-  bottom: -5px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-.pay .container .payBody .payQR .fa-qrcode::before {
-  font-family: "Font Awesome 5 Pro";
-  padding-right: 1rem;
-}
-.pay .container .payBody .payQR .tel {
-  margin: 30px 0;
-  font-size: 18px;
-  font-weight: 300;
-  text-align: center;
+.pay .container .payBody .payLists li.showTarget {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 /* access  */
@@ -1616,6 +1622,14 @@ footer .container small {
   }
 }
 @media screen and (max-width: 768px) {
+  header .headerTopContainer .headerLeft .headerDot {
+    display: none;
+  }
+
+  .mainDot {
+    display: block;
+  }
+
   section {
     padding-top: 150px;
     padding-bottom: 50px;
@@ -1726,15 +1740,16 @@ footer .container small {
     display: none;
   }
 
-  .pay .container .payBody {
+  .pay .container .payBody .payLists {
     display: block;
   }
-  .pay .container .payBody .payCard {
+  .pay .container .payBody .payLists li {
+    margin: 0 auto 120px;
     width: 100%;
-    margin: 0 auto 60px;
   }
-  .pay .container .payBody .payQR {
-    width: 100%;
+  .pay .container .payBody .payLists li img {
+    width: 50%;
+    height: auto;
   }
 
   .access .container .accessBody .shopInfo {
