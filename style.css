@@ -1898,13 +1898,12 @@ footer .container small {
   }
 
   .modalBox {
-    width: 50%;
+    width: 80%;
     height: 80vh;
     padding: 10px;
-    overflow-y: auto;
   }
   .modalBox .itemImage {
-    padding-bottom: 86.9%;
+    padding-bottom: 94%;
   }
   .modalBox .itemDescription h4 {
     white-space: no-wrap;
@@ -1927,9 +1926,9 @@ footer .container small {
     font-size: 13px;
   }
   .modalBox .closeBtn {
-    bottom: -22%;
-    -webkit-transform: translate(-20px, 0);
-            transform: translate(-20px, 0);
+    bottom: 0;
+    -webkit-transform: translate(-20px, -20px);
+            transform: translate(-20px, -20px);
   }
 }
 @media screen and (max-width: 520px) {
