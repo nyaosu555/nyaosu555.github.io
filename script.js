@@ -100,13 +100,13 @@ let showTargetresults = [
         }
       }
       
-      // for (let i = 0; i < targetPayLiElements.length; i++) {
-      //   targetPayLiElements[i].style.animationDelay = '' + (i * .5) + 's';
-      //   const showTargetElements = targetPayLiElements[i].getBoundingClientRect().top + targetPayLiElements[i].clientHeight * .2;
-      //   if(window.innerHeight > showTargetElements) {
-      //     targetPayLiElements[i].classList.add('showTarget');
-      //   }
-      // }
+      for (let i = 0; i < targetPayLiElements.length; i++) {
+        targetPayLiElements[i].style.animationDelay = '' + (i * .5) + 's';
+        const showTargetElements = targetPayLiElements[i].getBoundingClientRect().top + targetPayLiElements[i].clientHeight * .2;
+        if(window.innerHeight > showTargetElements) {
+          targetPayLiElements[i].classList.add('showTarget');
+        }
+      }
       
       for (let i = 0; i < notices.length; i++) {
         const showTargetElements = notices[i].getBoundingClientRect().top + notices[i].clientHeight * .2;
@@ -179,5 +179,55 @@ let showTargetresults = [
   };
   
 }
+
+// モーダルウィンドウ表示
+  const mask = document.getElementById('mask'),
+        items = document.querySelectorAll('.itemLineUpLists > li > a'),
+        modalBox = document.querySelectorAll('.modalBox'),
+        mCloseBtn = document.querySelectorAll('.closeBtn');
+
+
+  for(let i = 0; i < items.length; i++) {
+    let targetItem = items[i];
+
+    targetItem.addEventListener('click', e => {
+      e.preventDefault();
+
+      // モーダルウィンドウ表示
+      mask.classList.add('active');
+      mask.style.zIndex = `997`;
+      
+      if(targetItem.classList.contains('m-komusubi')) {
+        modalBox[i].classList.add('active');
+      } else if(targetItem.classList.contains('m-oozeki')) {
+        modalBox[i].classList.add('active');
+      } else {
+        modalBox[i].classList.add('active');
+      }
+    });
+
+  }
+
+  // モダール閉じる処理
+  mask.addEventListener('click',() => {
+    mask.classList.remove('active');
+    mask.style.zIndex = `1`;
+    for(let i = 0; i < modalBox.length; i++) {
+      modalBox[i].classList.remove('active');
+    }
+  });
+
+  // モダールcloseボタンで閉じる処理
+  for (let i = 0; i < mCloseBtn.length; i++) {
+    mCloseBtn[i].addEventListener('click', (e) => {
+      e.preventDefault();
+
+      mask.classList.remove('active');
+      mask.style.zIndex = `1`;
+      for(let i = 0; i < modalBox.length; i++) {
+        modalBox[i].classList.remove('active');
+      }
+    });
+  }
 
 }
