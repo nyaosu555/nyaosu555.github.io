@@ -1952,11 +1952,12 @@ footer .container small {
     right: -20px;
   }
 }
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 400px) {
   .itemLineUp .itemLineUpBody .banduke {
     width: 100%;
   }
-
+}
+@media screen and (max-width: 350px) {
   .contact .container .contactBody .contactForm .contactBtn {
     width: 100%;
   }
