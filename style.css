@@ -831,12 +831,6 @@ header .headerBottomContainer nav ul li a.selected {
   background-size: contain;
   background-position: center;
   position: relative;
-  oipacity: 0;
-  visbility: hidden;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-  -webkit-transition: 2s 1s;
-  transition: 2s 1s;
 }
 .concept .container .coceptBody .conceptImage::after {
   content: "";
@@ -882,13 +876,14 @@ header .headerBottomContainer nav ul li a.selected {
   margin-top: 60px;
 }
 .itemLineUp .itemLineUpBody .banduke {
-  width: 350px;
+  max-width: 350px;
+  width: 100%;
   border: 5px solid #000;
   margin: 0 auto 60px;
   padding: 10px;
   background-color: #fff;
   opacity: 0;
-  visbility: hidden;
+  visibility: hidden;
   -webkit-transform: translateY(100px);
           transform: translateY(100px);
   -webkit-transition: 2s;
@@ -1602,7 +1597,6 @@ footer .container small {
             transform: translateY(-100%);
     -webkit-transition: 0.3s;
     transition: 0.3s;
-    overflow-y: auto;
     min-height: 100vh;
     background-color: #fff;
   }
@@ -1950,11 +1944,6 @@ footer .container small {
     position: absolute;
     top: -1px;
     right: -20px;
-  }
-}
-@media screen and (max-width: 400px) {
-  .itemLineUp .itemLineUpBody .banduke {
-    width: 100%;
   }
 }
 @media screen and (max-width: 350px) {
