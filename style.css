@@ -850,7 +850,7 @@ header .headerBottomContainer nav ul li a.selected {
 }
 .concept .container .coceptBody .conceptImage.showTarget {
   oipacity: 1;
-  visbility: visible;
+  visibility: visible;
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
@@ -916,7 +916,7 @@ header .headerBottomContainer nav ul li a.selected {
 }
 .itemLineUp .itemLineUpBody .banduke.showTarget {
   opacity: 1;
-  visbility: visible;
+  visibility: visible;
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
