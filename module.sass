@@ -76,6 +76,7 @@ p
   visibility: hidden
   transition: .5s
   z-index: 1
+  // display: none
 
 
   &.active 
@@ -505,10 +506,10 @@ header
         background-size: contain
         background-position: center
         position: relative
-        oipacity: 0
-        visbility: hidden
-        transform: translateX(100%)
-        transition: 2s 1s
+        // oipacity: 0
+        // visibility: hidden
+        // transform: translateX(40%)
+        // transition: 2s
 
         &::after
           content: ''
@@ -527,7 +528,7 @@ header
 
       .conceptImage.showTarget
         oipacity: 1
-        visbility: visible
+        visibility: visible
         transform: translateX(0)
 
 /* itemLineUp  */
@@ -552,13 +553,14 @@ header
     margin-top: 60px
     
     .banduke
-      width: 350px
+      max-width: 350px
+      width: 100%
       border: 5px solid #000
       margin: 0 auto 60px
       padding: 10px
       background-color: #fff
       opacity: 0
-      visbility: hidden
+      visibility: hidden
       transform: translateY(100px)
       transition: 2s
 
@@ -581,7 +583,7 @@ header
 
     .banduke.showTarget
       opacity: 1
-      visbility: visible
+      visibility: visible
       transform: translateY(0)
     
     .itemLineUpLists
@@ -1041,7 +1043,9 @@ header
 
         .contactBtn
           margin: 30px auto
-          width: 300px
+          max-width: 360px
+          justify-content: center
+          align-items: center
           text-align: center
         
           &::before
@@ -1296,7 +1300,7 @@ footer
       width: 100%
       transform: translateY(-100%)
       transition: .3s
-      overflow: auto
+      // overflow: auto
       min-height: 100vh
       background-color: #fff
 
@@ -1525,7 +1529,7 @@ footer
 
             li
               width: 15%
-                 
+
     &::before,
     &::after
       display: none
@@ -1668,7 +1672,42 @@ footer
           width: 100%
           border-bottom-left-radius: 15px
           border-bottom-right-radius: 15px
-  
+
+@media screen and ( max-width: 445px )  
+  .contact
+    .container
+      .contactBody
+        .contactForm
+          .contactBtn
+            max-width: 200px
+            width: 100%
+            font-size: 13px
+            padding: 15px
+            justify-content: space-between
+
+            &::before
+              content: ''
+              width: 9px
+              height: 9px
+              position: absolute
+              right: 0
+              top: 50%
+              border-top: 2px solid #333
+              border-right: 2px solid #333
+              transform: translate(-20px, -50%) rotate(45deg)
+              padding-right: 0
+
+            // &::after
+            //   content: ''
+            //   width: 100%
+            //   height: 100%
+            //   position: absolute
+            //   top: -5px
+            //   left: -5px
+            //   border: 2px solid #f8c2f4
+            //   cursor: pointer
+            //   transition: .3s
+
 @media screen and ( max-width: 420px )
   .mainDot
     width: 100%
@@ -1681,39 +1720,11 @@ footer
         top: -1px
         right: -20px
 
-@media screen and ( max-width: 350px )  
-  .itemLineUp
+// @media screen and ( max-width: 400px )  
+//   .itemLineUp
     
-    .itemLineUpBody
+//     .itemLineUpBody
 
-      .banduke
-        width: 100%
+//       .banduke
+//         width: 100%
 
-  .contact
-    .container
-      .contactBody
-        .contactForm
-          .contactBtn
-            width: 100%
-          
-            // &::before
-            //   content: ''
-            //   width: 12px
-            //   height: 12px
-            //   position: absolute
-            //   right: 0
-            //   top: 50%
-            //   border-top: 3px solid #333
-            //   border-right: 3px solid #333
-            //   transform: translate(-20px, -50%) rotate(45deg)
-
-            // &::after
-            //   content: ''
-            //   width: 100%
-            //   height: 100%
-            //   position: absolute
-            //   top: -5px
-            //   left: -5px
-            //   border: 2px solid #f8c2f4
-            //   cursor: pointer
-            //   transition: .3s

@@ -1332,7 +1332,13 @@ header .headerBottomContainer nav ul li a.selected {
 }
 .contact .container .contactBody .contactForm .contactBtn {
   margin: 30px auto;
-  width: 300px;
+  max-width: 360px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
 }
 .contact .container .contactBody .contactForm .contactBtn::before {
@@ -1933,6 +1939,30 @@ footer .container small {
     border-bottom-right-radius: 15px;
   }
 }
+@media screen and (max-width: 445px) {
+  .contact .container .contactBody .contactForm .contactBtn {
+    max-width: 200px;
+    width: 100%;
+    font-size: 13px;
+    padding: 15px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .contact .container .contactBody .contactForm .contactBtn::before {
+    content: "";
+    width: 9px;
+    height: 9px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    border-top: 2px solid #333;
+    border-right: 2px solid #333;
+    -webkit-transform: translate(-20px, -50%) rotate(45deg);
+            transform: translate(-20px, -50%) rotate(45deg);
+    padding-right: 0;
+  }
+}
 @media screen and (max-width: 420px) {
   .mainDot {
     width: 100%;
@@ -1944,10 +1974,5 @@ footer .container small {
     position: absolute;
     top: -1px;
     right: -20px;
-  }
-}
-@media screen and (max-width: 350px) {
-  .contact .container .contactBody .contactForm .contactBtn {
-    width: 100%;
   }
 }
